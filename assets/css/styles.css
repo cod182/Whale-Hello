@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Noto+Sans+JP&family=Open+Sans&family=Roboto:wght@300&display=swap');
+
+* {
+    margin:0;
+    padding:0;
+    border:0;
+}
+
+body {
+    font-family:'Roboto', 'Arial Narrow', Arial, sans-serif;
+    width:100vw;
+    background-color: snow;
+
+}
+
+header {
+    width:100%;
+    height:50px;
+    position:fixed;
+    top:0px;
+    z-index: 2;
+    font-weight: 600;
+}
+
+h1 {
+    visibility: hidden;
+}
+
+nav {
+    text-align: center;
+    height:75px;
+    z-index:3;
+}
+
+nav li {
+    display: inline;
+    text-align: center;
+    line-height: 75px;
+    padding-left:10px;
+    padding-right:10px;
+    letter-spacing: 4px;
+    background: rgba(255, 255, 255, 0.5);
+
+}
+
+nav a {
+    text-decoration: none;
+    list-style-type:none;
+    color:slateblue;
+    font-weight: 600;
+
+}
+
+nav a:hover{
+    color:royalblue;
+    border-bottom:1px solid royalblue;
+}
+
+.active {
+    border-bottom:1px solid slateblue;
+}
+
+#hero-image {
+    background:url(../images/Icon.png) no-repeat center center;
+    width:100%;
+    height:1000px;
+    overflow:hidden;
+
+    z-index: 1;
+
+
+    animation-name:hero-fade;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hero-fade{
+    from{
+        transform: scale(0.1);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+#about {
+    position:relative;
+
+}
+
+
+#about-outer-bg {
+    background: url("../images/About_image.jpg") no-repeat center center;
+    height:900px;
+    background-color: snow;
+
+    
+
+
+}
+
+#about-info {
+    width:75%;
+    height:80%;
+    position: absolute;
+    float:none;
+    display:block;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-left: 12.5%;
+    margin-right:12.5%;
+    font-family:Lato;
+
+}
+
+#about h2 {
+    text-align:center;
+    letter-spacing: 4px;
+    font-weight: 600;
+    margin-bottom:1%;
+}
+hr {
+    border:2px solid black;
+    margin-bottom: 2%;
+}
+#about p {
+    height:100%;
+    text-align:center;
+    line-height: 30px;
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+
+#portfolio {
+    width:100%;
+    height:1400px;
+    background-color: snow;
+    font-family: Lato;
+    display: block;
+}
+
+#port-head {
+    text-align: center;
+    margin:20px 0;
+    text-transform: uppercase;
+    text-decoration: underline;
+
+
+}
+
+#left-port {
+    width:45%;
+    height:500px;
+    float:left;
+    margin-left: 30px;
+
+}
+
+#right-port {
+    width:45%;
+    height:500px;
+    float:right;
+    margin-right: 30px;
+}
+
+.project img{
+    width:100%;
+    height:250px;
+    border:6px solid slateblue;
+    image-rendering: crisp-edges;
+}
+
+
+#left-port h2 {
+    text-align:right;
+    margin-bottom:10px;
+    margin-top:20px;
+}
+
+#left-port p {
+    text-align:right;
+}
+
+#right-port h2 {
+    text-align:left;
+    margin-bottom:10px;
+    margin-top:20px;
+}
+
+#right-port p {
+    text-align:justify;
+}
+
+#mobile-more {
+    visibility:hidden;
+    
+}
+
+
+/* CONTACT SECTION */
+
+
+
+#contact{
+    width:100%;
+    height:600px;
+    background:url(../images/underwater.jpg) repeat center center;
+    background-color: darkcyan;
+    position:relative;
+    display: block;
+
+}
+#contact-form{
+    max-width:400px;
+    color:#fff;
+    position:absolute;
+    margin-top:37.5px;
+    left:10%;
+    padding:30px;
+    background-color:rgba(60, 60, 60, 0.6);
+}
+
+.signup-title {
+    text-align: center;
+    font-weight: 600;
+    text-decoration: underline;
+    font-size: 200%;
+}
+
+
+.entry-box {
+    background:transparent;
+    color:#fafafa;
+    width:100%;
+    height:25px;
+    margin:5px 0 20px 0;
+    border:1px solid #fafafa;
+    border-radius:2px;
+}
+
+.text-entry-box{
+    background:transparent;
+    color:#fafafa;
+    width:100%;
+    height:100px;
+    margin:5px 0 20px 0;
+    border:1px solid #fafafa;
+    border-radius:2px;}
+
+
+#send-button {
+
+    width:100px;
+    height:40px;
+    background-color: rgb(27, 149, 248);
+    color:#fff;
+    font-weight: 600;
+}
+
+footer {
+    width:100%;
+}
+
+#social-links {
+    text-align: center;
+    height:75px;
+}
+
+#social-links li {
+    display: inline;
+    text-align: center;
+    line-height: 75px;
+    padding-left:40px;
+    padding-right:40px;
+    letter-spacing: 4px;
+
+}
+
+#social-links a {
+    text-decoration: none;
+    font-size: 300%;
+    color:blueviolet;
+
+}
+
+
+
+@media screen and (max-width:640px) {
+    #about-outer-bg {
+        height:1300px;
+    }
+
+    #portfolio {
+        height:1400px;
+    }
+
+    #right-port{
+        visibility: hidden;
+    }
+
+    #left-port {
+        float:none;
+        margin:0 auto;
+        width:80vw;
+    }
+    
+    #left-port h2 {
+        text-align:center;
+        margin-bottom:10px;
+        margin-top:20px;
+    }
+    
+    #left-port p {
+        text-align:center;
+    }
+
+    #mobile-more {
+        visibility:visible;
+
+        background-color: slateblue;
+        padding:6px;
+        color: #fff;
+        position: absolute;
+        margin-top: 770px;
+        /* margin-right: 000px;
+        margin-left: 150px; */
+    }
+
+    #mobile-button {
+        width:100vw;
+        bottom:20px;
+        display: block;
+        position:relative;
+        font-size: 200%;
+        text-align: center;
+    }
+
+    #mobile-more:hover {
+        background-color: #fff;
+        color:slateblue;
+    }
+}
